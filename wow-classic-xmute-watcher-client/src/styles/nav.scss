@@ -1,0 +1,428 @@
+.NavWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s;
+  padding-left: 0;
+
+  &--withPadding {
+    padding-left: 100px;
+  }
+
+  &-scrollObserver {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+  }
+}
+
+.MobileNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(180deg, #261812 0, #1a0f0b);
+  box-shadow: 0 0 10px rgb(0 0 0 / 60%);
+  border-bottom: 1px solid #352011;
+
+  &-logo {
+    background-image: url(/images/wow-logo-mobile.png);
+    background-size: contain;
+    height: 70%;
+    width: 35px;
+  }
+}
+
+.DesktopNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(51, 33, 25, 0.5);
+  border-top: 1px solid rgba(68, 47, 38, 0.5);
+  border-right: 1px solid rgba(68, 47, 38, 0.5);
+  border-left: 1px solid rgba(21, 13, 9, 0.8);
+  border-radius: 3px;
+  background: #211510 url(/images/top-nav-background.jpeg) repeat-x 80px 0;
+  box-shadow: 0 0 10px rgb(0 0 0 / 60%);
+  background-size: auto 100%;
+
+  &--small {
+    width: 95%;
+    height: 50px;
+  }
+  &--medium {
+    width: 95%;
+    height: 60px;
+  }
+  &--large {
+    width: 95%;
+    height: 65px;
+  }
+  &--xLarge {
+    width: 95%;
+    height: 80px;
+  }
+  &--max {
+    width: 1500px;
+    height: 80px;
+  }
+
+  &--sticky {
+    margin-top: 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 0px;
+    border-width: 0 0 1 0;
+  }
+
+  &-logoSpacing {
+    height: 100%;
+    border-right: 1px solid rgb(24 15 10);
+    transition: all 0.3s;
+    &--small {
+      width: 60px;
+    }
+    &--medium {
+      width: 130px;
+    }
+    &--large {
+      width: 160px;
+    }
+    &--xLarge,
+    &--max {
+      width: 190px;
+    }
+    &--sticky {
+      width: 60px;
+    }
+  }
+
+  &-logo {
+    background: url(/images/wow-logo-large.png);
+    background-size: contain;
+    position: absolute;
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--medium,
+    &--large,
+    &--xLarge,
+    &--max {
+      background-image: url(/images/wow-logo-large.png);
+    }
+
+    &--medium {
+      left: -100px;
+      width: 219px;
+      height: 86px;
+    }
+    &--large {
+      left: -100px;
+      width: 245px;
+      height: 96px;
+    }
+    &--xLarge,
+    &--max {
+      left: -100px;
+      width: 272px;
+      height: 106px;
+    }
+
+    &--small,
+    &--sticky {
+      background-image: url(/images/wow-logo-small.png);
+      left: 10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-contentHolder {
+    width: 100%;
+    height: 100%;
+    max-width: 1625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    width: 100%;
+  }
+
+  &-menuButtons,
+  &-socialButtons {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-menuButtons {
+    border-right: 1px solid rgb(53 36 29);
+  }
+
+  &-socialButtons {
+    border-left: 1px solid rgb(24 15 10);
+  }
+}
+
+.NavMenuButton {
+  height: 100%;
+  padding: 0 8px;
+  border-left: 1px solid rgb(53 36 29);
+  border-right: 1px solid rgb(24 15 10);
+  transition: all 0.3s;
+  &:hover {
+    .NavMenuButton-content {
+      color: white;
+    }
+  }
+  &-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-toptext {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #c76700;
+    top: -15px;
+    font-size: 9px;
+  }
+
+  &-content {
+    position: relative;
+    font-feature-settings: "kern", "kern";
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: transparent;
+    background-image: -webkit-linear-gradient(
+      top,
+      #efd100,
+      #e2a233 19%,
+      #f0c328 30%,
+      #fff1a3 43%,
+      #ffe13e 50%,
+      #fff 51%,
+      #fff
+    );
+    line-height: 1.5em;
+    background-size: 1em 2.5em;
+    background-position: center 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.3s;
+  }
+
+  &-socialIcon {
+    font-family: Icons;
+    font-size: 1.5rem;
+    margin-right: 5px;
+    &--linkedin {
+      &::after {
+        content: "\f08c";
+      }
+    }
+    &--github {
+      &::after {
+        content: "\f113";
+      }
+    }
+  }
+
+  &--linkedInButton {
+    background: #211510 url(/images/top-nav-linkedin-background.jpeg) repeat-x
+      80px 0;
+    border-top: 1px solid rgba(179, 61, 38, 0.5);
+    border-right: 1px solid rgba(179, 61, 38, 0.5);
+    border-left: 1px solid rgba(179, 61, 38, 0.5);
+    border-bottom: 1px solid rgba(179, 61, 38, 0.5);
+  }
+
+  &--githubButton {
+    background: #211510 url(/images/top-nav-github-background.jpeg) repeat-x
+      80px 0;
+    border-top: 1px solid rgba(179, 61, 38, 0.5);
+    border-right: 1px solid rgba(179, 61, 38, 0.5);
+    border-left: 1px solid rgba(179, 61, 38, 0.5);
+    border-bottom: 1px solid rgba(135, 43, 25, 0.5);
+  }
+}
+
+.NavMenuDropdown {
+  position: relative;
+  height: 100%;
+  padding: 0 8px;
+  border-left: 1px solid rgb(53 36 29);
+  border-right: 1px solid rgb(24 15 10);
+  transition: all 0.3s;
+  &:hover {
+    .NavMenuDropdown-control,
+    .NavMenuDropdown-arrow {
+      color: white;
+    }
+  }
+  &-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-menu {
+    position: absolute;
+    overflow: hidden;
+    top: calc(100% + 1px);
+    right: -1px;
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(
+      rgba(1, 1, 2, 0.97),
+      rgba(21, 13, 6, 0.97)
+    );
+    box-shadow: 0 0 10px rgb(0 0 0 / 60%);
+    border-bottom: 0;
+    transition: all 0.1s;
+    color: white;
+
+    &--open {
+      width: 500px;
+      height: 545px;
+      border-left: 1px solid #241505;
+      border-right: 1px solid #241505;
+      border-bottom: 1px solid #311c06;
+    }
+  }
+  &-arrow {
+    font-feature-settings: "kern", "kern";
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: transparent;
+    background-image: -webkit-linear-gradient(
+      top,
+      #efd100,
+      #e2a233 19%,
+      #f0c328 30%,
+      #fff1a3 43%,
+      #ffe13e 50%,
+      #fff 51%,
+      #fff
+    );
+    line-height: 1.5em;
+    background-size: 1em 2.5em;
+    background-position: center 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+    font-family: Icons;
+    transition: all 0.2s;
+    &::after {
+      content: "\f078";
+    }
+    &--open {
+      color: white;
+      transform: rotate(180deg);
+    }
+  }
+
+  &-control {
+    font-feature-settings: "kern", "kern";
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: transparent;
+    background-image: -webkit-linear-gradient(
+      top,
+      #efd100,
+      #e2a233 19%,
+      #f0c328 30%,
+      #fff1a3 43%,
+      #ffe13e 50%,
+      #fff 51%,
+      #fff
+    );
+    line-height: 1.5em;
+    background-size: 1em 2.5em;
+    background-position: center 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.3s;
+    &--open {
+      color: white;
+    }
+  }
+}
+
+.ProjectSelector {
+  display: flex;
+  margin: 0 15px;
+  padding: 15px 0px;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #311c06;
+  }
+  &:hover {
+    .ProjectSelector-projectName,
+    .ProjectSelector-projectDescription {
+      color: white;
+    }
+    .ProjectSelector-img {
+      box-shadow: 0px 0px 5px 5px rgb(235 222 194 / 50%);
+    }
+  }
+  &-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s;
+    border-radius: 3px;
+  }
+  &-texts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+  &-projectName {
+    transition: all 0.3s;
+    display: flex;
+    margin-bottom: 5px;
+    color: transparent;
+    font-size: 1.3rem;
+    background-image: -webkit-linear-gradient(
+      top,
+      #efd100,
+      #e2a233 19%,
+      #f0c328 30%,
+      #fff1a3 43%,
+      #ffe13e 50%,
+      #fff 51%,
+      #fff
+    );
+    background-size: 1em 2.5em;
+    background-position: center 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  &-projectDescription {
+    transition: all 0.3s;
+    display: flex;
+    color: #ebdec2;
+    font-size: 1rem;
+  }
+}

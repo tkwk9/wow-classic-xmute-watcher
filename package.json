@@ -1,0 +1,16 @@
+{
+  "name": "wow-classic-xmute-watcher",
+  "version": "0.0.0",
+  "description": "WoW Classic Xmute Watch",
+  "private": true,
+  "workspaces": ["wow-classic-xmute-watcher-client", "wow-classic-xmute-watcher-server"],
+  "scripts": {
+    "start": "node ./wow-classic-xmute-watcher-server/init.js",
+    "watch": "nodemon ./wow-classic-xmute-watcher-server/init.js",
+    "deploy": "gcloud app deploy",
+    "show-prod": "gcloud app browse",
+    "prod-logs": "gcloud app logs tail -s default"
+  },
+  "author": "Tim Kwak",
+  "license": "ISC"
+}

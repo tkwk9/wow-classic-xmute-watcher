@@ -1,0 +1,55 @@
+.RecipeOverview {
+  &-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ebdec2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    &--mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-reagents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--mobile {
+      align-items: center;
+    }
+  }
+
+  &-arrow {
+    background-image: url("/images/right-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    &--mobile {
+      width: 50%;
+      min-height: 200px;
+      background-image: url("/images/down-arrow.png");
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    &--mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-xmuteItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

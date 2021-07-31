@@ -1,0 +1,11 @@
+# Node.js dependencies
+node_modules/
+
+# Build
+wow-classic-xmute-watcher-client/build
+
+# Personal Sandbox
+sandbox/
+
+# misc.
+.DS_Store

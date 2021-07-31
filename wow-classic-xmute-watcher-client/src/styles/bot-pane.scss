@@ -1,0 +1,19 @@
+.BotPane {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    &--market {
+        background: url(/images/bot-pane-market-background.jpeg);
+        border: 1px solid #252932;
+    }
+    &--about {
+        background: url(/images/bot-pane-about-background.jpg);
+        border: 1px solid #160f0c;
+    }
+}
+
+.BotPane-content {
+    margin: 50px 0;
+    width: 95%;
+    max-width: 1600px;
+}

@@ -1,0 +1,17 @@
+.TopPaneAboutContent {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    color: #ebdec2;
+    font-size: 1rem;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    text-align: center;
+  }
+}

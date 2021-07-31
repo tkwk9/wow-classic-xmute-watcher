@@ -1,0 +1,41 @@
+.TopPaneMarketContent {
+  &-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  &-notes {
+    color: #ebdec2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-code {
+    font-style: italic;
+    background: #434a54;
+    border-radius: 2px;
+  }
+
+  &-selectors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--mobile {
+      flex-direction: column;
+    }
+  }
+
+  &-subheader {
+    font-size: 1.44rem;
+    margin-bottom: 14px;
+  }
+  &-sentence {
+    font-size: 1rem;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    color: lightblue;
+    text-decoration: underline;
+  }
+}

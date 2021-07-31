@@ -1,0 +1,99 @@
+.ItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 68px;
+  height: 68px;
+
+  .ItemBorder {
+    z-index: 1;
+  }
+  .ItemImage {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+  }
+  .ItemCount {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+  }
+}
+
+.TooltipItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 23px;
+  height: 23px;
+
+  .TooltipItemBorder {
+    z-index: 1;
+  }
+  .TooltipItemImage {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 5px;
+  }
+}
+
+.Price {
+  color: white;
+  font-family: Verdana;
+  font-size: 0.85rem;
+  .UnitAmount {
+    margin-left: 5px;
+  }
+  .GoldIcon {
+    background-image: url("/images/money-gold.gif");
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .SilverIcon {
+    background-image: url("/images/money-silver.gif");
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .CopperIcon {
+    background-image: url("/images/money-copper.gif");
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.XmuteItem {
+  display: flex;
+  &-name {
+    color: rgb(0, 112, 221);
+    font-size: 0.9rem;
+  }
+  &-level {
+    color: rgb(255, 209, 0);
+    font-size: 0.85rem;
+  }
+}
+
+.Reagent {
+  display: flex;
+  &-name {
+    color: rgb(30, 255, 0);
+    font-size: 0.9rem;
+  }
+  &-level {
+    color: rgb(255, 209, 0);
+    font-size: 0.85rem;
+  }
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}

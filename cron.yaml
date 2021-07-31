@@ -1,0 +1,6 @@
+cron:
+- description: "Fetch a batch of auction data then uploads to GCS"
+  url: /fetch_auctions
+  schedule: every 1 hours
+  retry_parameters:
+    job_retry_limit: 3

@@ -1,0 +1,52 @@
+.TopPane {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 15% top;
+  background-repeat: no-repeat;
+  &--market {
+    background-image: url(/images/top-pane-market-background.jpeg);
+    border: 1px solid #0b200c;
+  }
+  &--about {
+    background-image: url(/images/top-pane-about-background.jpg);
+    background-position-y: 60%;
+    border: 1px solid #120c15f2;
+  }
+}
+
+.TopPane-overlay {
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 100%;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.TopPane-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: white;
+  z-index: 1;
+  margin: 150px 0 40px;
+  width: 95%;
+  max-width: 1600px;
+
+  &--mobile {
+    margin: 70px 0 40px;
+    text-align: center;
+  }
+}

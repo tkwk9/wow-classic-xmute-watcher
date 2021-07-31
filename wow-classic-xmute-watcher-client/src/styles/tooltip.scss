@@ -1,0 +1,29 @@
+.Tooltip {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: white;
+  font-family: Verdana;
+    
+  &-content {
+    padding-left: 8px;
+    padding-top: 8px;
+    background-image: url('/images/tooltip.png');
+    background-position: top left;
+  }
+  &-right {
+    padding-right: 8px;
+    background-image: url('/images/tooltip.png');
+    background-position: top right;
+  }
+  &-botLeft, &-botRight {
+    padding-bottom: 8px;
+    flex-basis: 50%;
+    background-image: url('/images/tooltip.png');
+  }
+  &-botLeft{
+    background-position: bottom left;
+  }
+   &-botRight{
+    background-position: bottom right;
+   }
+}

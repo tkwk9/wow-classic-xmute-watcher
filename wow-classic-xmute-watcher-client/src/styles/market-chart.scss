@@ -1,0 +1,66 @@
+.MarketChart {
+  position: relative;
+  &-resetButton {
+    position: absolute;
+    padding: 3px 8px;
+    right: 40px;
+    top: 85px;
+    border-radius: 5px;
+    background-color: #f8b700;
+    color: #211510;
+    opacity: 0.8;
+    font-size: 0.8em;
+    transition: all 0.5s cubic-bezier(0.59, 1.62, 0.47, 0.69);
+    &--hide {
+      pointer-events: none;
+      font-size: 0em;
+      opacity: 0;
+    }
+  }
+  &-customTooltipWrapper {
+    pointer-events: none;
+    transition: all 0.3s;
+    position: absolute;
+  }
+}
+
+.CustomTooltip {
+  &-section {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &-xmuteItem {
+    display: flex;
+    align-items: center;
+  }
+
+  &-xmuteItemName {
+    color: rgb(0, 112, 221);
+    font-size: 14px;
+    &--selected {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  &-reagentName {
+    color: rgb(30, 255, 0);
+    font-size: 14px;
+    margin-right: 5px;
+    &--selected {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  &-reagent {
+    display: flex;
+    align-items: center;
+  }
+
+  &-profitText {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}

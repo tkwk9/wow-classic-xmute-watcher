@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Semplicita";
+  src: url(/fonts/semplicita-bold.woff2);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(/fonts/opensans.woff);
+}
+
+@font-face {
+  font-family: "Icons";
+  src: url(/fonts/fontawesome-webfont.woff2);
+}
+
+#root {
+  background-color: #160e09;
+  overflow: hidden;
+  min-height: 100vh;
+  font-family: Semplicita, Open Sans, Arial, Helvetica, sans-serif;
+}
+
+.App {
+  margin: auto;
+  max-width: 2400px;
+  box-shadow: 0px 0px 50px #000;
+  background-color: #000;
+}

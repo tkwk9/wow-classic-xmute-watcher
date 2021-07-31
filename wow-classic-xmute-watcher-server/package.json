@@ -1,0 +1,23 @@
+{
+  "name": "wow-classic-xmute-watcher-server",
+  "version": "0.0.0",
+  "description": "NodeJS Backend for WoW Classic Xmute Watch",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node ./init.js",
+    "watch": "nodemon ./init.js"
+  },
+  "author": "Tim Kwak",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/secret-manager": "^3.7.3",
+    "@google-cloud/storage": "^5.8.5",
+    "btoa": "^1.2.1",
+    "express": "^4.17.1",
+    "fetch-retry": "^4.1.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

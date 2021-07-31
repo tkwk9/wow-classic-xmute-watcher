@@ -1,0 +1,38 @@
+.BotPaneAboutContent {
+  max-width: 800px;
+  margin: auto;
+  color: #ebdec2;
+  &-header {
+    margin: 20px 0;
+    color: transparent;
+    font-size: 1.85rem;
+    background-image: -webkit-linear-gradient(
+      top,
+      #efd100,
+      #e2a233 19%,
+      #f0c328 30%,
+      #fff1a3 43%,
+      #ffe13e 50%,
+      #efd100 51%,
+      #e2a233 70%,
+      #f0c328 80%,
+      #fff1a3 93%,
+      #fff 99%,
+      #fff
+    );
+    background-size: 1em 2.5em;
+    background-position: center 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  &-paragraph {
+    font-size: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  img {
+    border: 1px solid #252932;
+    border-radius: 5px;
+  }
+}
